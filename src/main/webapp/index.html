@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Browser Implementation Readiness (BIR) Test Page</title>
+<!-- JQuery -->
+<script src="Scripts/jQuery/jquery-3.1.1.js"></script>
+<script src="Scripts/jQuery/jquery-ui-1.12.js"></script>
+
+
+<script src="Scripts/jQuery/jquery.cookie.js"></script>
+
+<link type="text/css" rel="stylesheet"
+	href="Scripts/jQuery/jquery-ui.css" />
+<link type="text/css" rel="stylesheet"
+	href="Scripts/jQuery/jquery-ui.structure.css" />
+<link type="text/css" rel="stylesheet"
+	href="Scripts/jQuery/jquery-ui.theme.css" />
+
+
+<script src="Scripts/jQuery/captcha-realperson/jquery.plugin.js"></script>
+<script src="Scripts/jQuery/captcha-realperson/jquery.realperson.js"></script>
+
+
+<link type="text/css" rel="stylesheet"
+	href="Scripts/jQuery/captcha-realperson/jquery.realperson.css" />
+
+<!-- JQuery MultiSelect Plugin -->
+
+<script src="Scripts/jQuery/multiselect/multiselect.js"></script>
+
+<link type="text/css" rel="stylesheet" href="Shared/css/uistyle.css" />
+
+
+<!-- JSGrid -->
+<link type="text/css" rel="stylesheet"
+	href="Scripts/jQuery/jsgrid/jsgrid.min.css" />
+<link type="text/css" rel="stylesheet"
+	href="Scripts/jQuery/jsgrid/jsgrid-theme.min.css" />
+<script type="text/javascript" src="Scripts/jQuery/jsgrid/jsgrid.min.js"></script>
+
+
+<script src="Scripts/test/testspec.js"></script>
+
+<script src="Scripts/WebSpeech/webspeechspec.js"></script>
+<script src="Scripts/WebSpeech/webspeech.js"></script><script src="Scripts/WebAudio/webaudiorecorder.js"></script>
+<script src="Scripts/test/Util.js"></script>
+<script src="Scripts/test/index.js"></script>
+<script src="Scripts/test/manualtest.js"></script>
+
+<script type="text/javascript">
+  $(document)
+      .ready(
+          function() {
+            $("#tabs").tabs();
+
+            $("#ttsTestLoad").load("Scripts/WebSpeech/ttsManualTest.html");
+            createButton($("#ttsManualTest"),
+                'Perform Text-to-speech Manual test',
+                'Perform Text-to-speech Manual test');
+
+            $('#recorderTestLoad').load(
+                "Scripts/WebAudio/recordermanualtest.html");
+
+            createButton($("#recorderManualTest"),
+                'Perform Audio Recorder Manual Test',
+                'Perform Audio Recorder Manual Test');
+            
+            $('#refreshPage').click(function(){
+              window.location.reload(true);
+            });
+
+            $('#printReport').click(function(){
+              window.print();
+            });
+            
+
+            beginW3CAPITest();
+          });
+</script>
+
+</head>
+
+<body>
+	<div id="main">
+		<div>
+
+			<h1 class="entry-title">
+				<span> Browser W3C Web Speech & Audio API </span> <span id="versionInfo">
+				</span>
+			</h1>
+			<p class="header-paragraph" align="right">
+				<img alt="Reload" title="Reload" src="Shared/images/refresh.png"
+					id="refreshPage" class="header-ui-icon"> <img alt="Print"
+					title="Print" src="Shared/images/print.png" id="printReport"
+					class="header-ui-icon">
+			</p>
+		</div>
+
+		<div id="tabs">
+			<ul>
+				<li><a href="#ttsApiTab" class="intro-tab-detail">Text-to-speech
+						(TTS)</a></li>
+				<li><a href="#audioApiTab" class="intro-tab-detail">Audio
+						Recorder</a></li>
+
+			</ul>
+
+
+
+
+
+			<div id="ttsApiTab">
+				<div class="header-irt" id="textToSpeechAPI">
+					<div class="divTable-header">
+						<div class="divTableBody">
+							<div class="divTableRow">
+								<div class="divTableCellText">Text-to-speech (TTS)</div>
+								<div class="divTableCellScore" id="sectionScore"></div>
+								<div class="divTableCellScoreIcon" id="scoreHTML"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="jsTTSGrid"></div>
+
+				<div>&nbsp;</div>
+				<div>
+
+					<button id="ttsManualTest"
+						onclick="javascript:loadDialogBox($('#dialogTTS'), 'TTS', 'TTS API Manual Test',true)"></button>
+
+				</div>
+			</div>
+
+
+			<div id="audioApiTab">
+				<div class="header-irt" id="audioAPI">
+					<div class="divTable-header">
+						<div class="divTableBody">
+							<div class="divTableRow">
+								<div class="divTableCellText">Audio Recorder</div>
+								<div class="divTableCellScore" id="sectionScore"></div>
+								<div class="divTableCellScoreIcon" id="scoreHTML"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="jsAudioRecorderGrid"></div>
+				<div>&nbsp;</div>
+				<div>
+
+					<button id="recorderManualTest"
+						onclick="javascript:loadDialogBox($('#dialogRECORDER'), 'RECORDER', 'Audio Recorder API Manual Test',true)"></button>
+
+				</div>
+			</div>
+
+
+
+
+		</div>
+
+		<div id="ttsTestLoad"></div>
+
+		<div id="recorderTestLoad"></div>
+
+		<div id="apiSectionCountInfo" style="display: none;">
+			<div class="header-result" id="apiCountHeaderSection">
+				<div class="liketext">
+					<img alt="Required tests passed" title="Required tests passed"
+						src="Shared/images/button-check_green.png" id="result-icon-header">
+				</div>
+				<div class="liketext" id="rPassCount">requiredPassCount</div>
+				<div class="liketext">&nbsp;</div>
+				<div class="liketext">
+					<img alt="Required tests failed" title="Required tests failed"
+						src="Shared/images/button-cross_red.png" id="result-icon-header">
+				</div>
+				<div class="liketext" id="rFailCount">requiredFailCount</div>
+				<div class="liketext">&nbsp;</div>
+				<div class="liketext">
+					<img alt="Optional tests passed" title="Optional tests passed"
+						src="Shared/images/button-check_yellow.png"
+						id="result-icon-header">
+				</div>
+				<div class="liketext" id="oPassCount">optionalPassCount</div>
+				<div class="liketext">&nbsp;</div>
+				<div class="liketext">
+					<img alt="Optional tests passed" title="Optional tests failed"
+						src="Shared/images/button-cross_yellow.png"
+						id="result-icon-header">
+				</div>
+				<div class="liketext" id="oFailCount">optionalFailCount</div>
+
+				<div class="liketext">&nbsp;</div>
+				<div class="liketext">
+					<img alt="Tests not performed by user"
+						title="Tests not performed by user"
+						src="Shared/images/question_blue.png" id="result-icon-header">
+				</div>
+				<div class="liketext" id="tNotPerformed">notperformedCount</div>
+
+			</div>
+		</div>
+
+	</div>
+
+</body>
+</html>

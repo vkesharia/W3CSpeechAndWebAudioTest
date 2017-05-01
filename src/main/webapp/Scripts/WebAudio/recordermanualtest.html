@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+
+<body>
+
+  <div id="dialogRECORDER" style="display: none;">
+
+    <div id="recorderTest" style="float: left; width: 50%">
+
+      <div>&nbsp;</div>
+
+      <div></div>
+
+
+      <div class="divTable-report">
+        <div class="divTableBody">
+
+
+
+          <div class="divTableRow">
+            <div class="divTableCell">Initialization:</div>
+            <div class="divTableCellRight">
+              <button id="initiateRecording"></button>
+              <button id="getRecordingStatus"></button>
+            </div>
+          </div>
+          <div class="divTableRow">&nbsp;</div>
+
+          <div class="divTableRow">
+            <div class="divTableCell">Device selection:</div>
+            <div class="divTableCellRight">
+              <button id="getRecordingCapabilities"></button>
+              <button id="concludeCapability" style="display: none;"></button>
+            </div>
+          </div>
+
+          <div class="divTable-report" id="recorderInputOutputSelection"
+            style="display: none;">
+            <div class="divTableRow">&nbsp;</div>
+
+            <div class="divTableRow">
+              <div class="divTableCell">Input source:</div>
+              <div class="divTableCellRight">
+                <select id="audioSource"></select>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="divTableRow">&nbsp;</div>
+          <div class="divTableRow">
+            <div class="divTableCell">Recording: (<span id="timer">00:00</span>)</div>
+            <div class="divTableCellRight">
+              <button id="startRecording"></button>
+              <button id="stopRecording"></button>
+            </div>
+          </div>
+          <div class="divTableRow">&nbsp;</div>
+
+          <div class="divTableRow">
+            <div class="divTableCell">Playback:</div>
+            <div class="divTableCellRight">
+              <button id="startPlaybackRecording"></button>
+              <button id="pausePlaybackRecording"></button>
+              <button id="resumePlaybackRecording"></button>
+              <button id="stopPlaybackRecording"></button>
+            </div>
+          </div>
+
+          <div class="divTableRow">&nbsp;</div>
+          <div class="divTableRow">&nbsp;</div>
+          <div class="divTableRow">
+            <div class="divTableCell">Recorder Status:</div>
+            <div class="divTableCellRight" id="recorderStatusText">
+
+              <span class="yellow-background">Uninitialized</span>
+
+
+            </div>
+          </div>
+          <div class="divTableRow">&nbsp;</div>
+          <div class="divTableRow" id="audio_data_output_textfield" style="display: none;">
+          <p>Base64 Encoded Recorded Audio:</p>
+            <textarea name="recordedData" id="recordedData" style="width: 90%;resize: none;height: 200px;" disabled="disabled"></textarea>
+          </div>
+
+        </div>
+      </div>
+
+
+
+    </div>
+
+    <div id="recorderManualReport" style="float: right; width: 50%">
+      <div class="header-irt">Manual test instructions</div>
+      <div id="recorderGrid"></div>
+
+    </div>
+
+  </div>
+
+  <div id="dialog-recorder-error" style="display: none;"></div>
+</body>
+</html>

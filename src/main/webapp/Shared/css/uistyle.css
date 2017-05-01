@@ -1,0 +1,558 @@
+#dialogTTS {
+	display: none;
+	width: 100%;
+}
+
+#ttsTextArea {
+	/*  float: left;
+  width: 30%; */
+	
+}
+
+#ttsTestButtons {
+	/*     float: right;
+    width: 70%; */
+	
+}
+
+.divTable {
+	display: table;
+	width: 60%;
+}
+
+.divTable-report {
+	display: table;
+	padding: .5% 1% 1% 1%;
+	width: 100%;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1em;
+}
+
+.divTableRow {
+	display: table-row;
+}
+
+.divTableCellReport {
+	vertical-align: middle;
+	display: table-cell;
+	float: left;
+	width: 40%;
+}
+
+.divTableCell, .divTableHead {
+	vertical-align: middle;
+	display: table-cell;
+	float: left;
+	width: 30%;
+}
+
+.divTableCellRight, .divTableHeadRight {
+	vertical-align: middle;
+	display: table-cell;
+	float: left;
+	width: 60%;
+}
+
+.divTableCellMultiSelect, .divTableHeadRight {
+	vertical-align: middle;
+	display: table-cell;
+	width: 40%;
+}
+
+.divTableCellMultiSelectButton, .divTableHeadRight {
+	vertical-align: middle;
+	display: table-cell;
+	width: 20%;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+.divTableCellButton, .divTableHead {
+	vertical-align: middle;
+	display: table-cell;
+	float: left;
+	width: 90%;
+}
+
+.divTableHeading {
+	display: table-header-group;
+	font-weight: bold;
+}
+
+.divTableFoot {
+	background-color: #EEE;
+	display: table-footer-group;
+	font-weight: bold;
+}
+
+.divTableBody {
+	display: table-row-group;
+}
+
+.ui-slider label {
+	position: absolute;
+	width: 20px;
+	margin-top: 15px;
+	margin-left: -10px;
+	text-align: center;
+}
+
+.header-irt {
+	background: #696969;
+	position: relative;
+	padding: 5px 10px;
+	height: 25px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 1.3em;
+	text-align: left;
+	color: #f6f6f6;
+}
+
+.header-ext {
+	background: #696969;
+	position: relative;
+	padding: 5px 10px;
+	height: 25px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 1.3em;
+	text-align: left;
+	color: #f6f6f6;
+}
+
+.header-forbidden {
+	background: #FF0000;
+	position: relative;
+	padding: 5px 10px;
+	height: 25px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 1.3em;
+	text-align: left;
+	color: #f6f6f6;
+}
+
+/* #358c21 */
+
+/* #358c21 */
+.irt-custom-button-click {
+	color: #FFFFFF;
+	background: rgb(0, 115, 147);
+}
+
+#main {
+	padding: 0px 10% 5% 10%;
+}
+
+#report-main {
+	padding: 0px 5% 0px 5%;
+}
+
+/* #html5TestMain,
+#css3TestMain{
+  padding: 0px 20% 0px 20%;
+} */
+.irt-grid-column-hide {
+	display: none;
+}
+
+.irt-grid-column-wrap {
+	word-wrap: break-word;
+	overwflow: auto;
+}
+
+.entry-title {
+	color: #008AB1;
+	border-bottom: 1px solid #D3DFE1;
+	padding-bottom: .25em;
+	font-family: Arial, Helvetica, sans-serif;
+	letter-spacing: -.05em;
+	font-style: normal;
+	font-weight: 400;
+}
+
+.multiselectButton {
+	padding: 6px 12px;
+	margin-bottom: 0;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 1.42857143;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	background-image: none;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	display: block;
+	width: 100%;
+	margin-top: 5px;
+}
+
+.form-control {
+	display: block;
+	width: 100%;
+	height: 200px;
+	padding: 6px 12px;
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: #555;
+	background-color: #fff;
+	background-image: none;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+	-webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow
+		ease-in-out .15s;
+	-o-transition: border-color ease-in-out .15s, box-shadow ease-in-out
+		.15s;
+	transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+#result-icon {
+	height: 30px;
+	width: 30px;
+}
+
+#left-intro-section {
+	-webkit-margin-start: 2px;
+	-webkit-margin-end: 2px;
+	-webkit-padding-before: 0.2em;
+	-webkit-padding-start: 0.75em;
+	-webkit-padding-end: 0.75em;
+	-webkit-padding-after: 0.625em;
+	min-width: -webkit-min-content;
+	width: 100%;
+	padding: 0 1% 2% 2%;
+}
+
+#right-intro-section {
+	-webkit-margin-start: 2px;
+	-webkit-margin-end: 2px;
+	-webkit-padding-before: 0.2em;
+	-webkit-padding-start: 0.75em;
+	-webkit-padding-end: 0.75em;
+	-webkit-padding-after: 0.625em;
+	min-width: -webkit-min-content;
+	width: 100%;
+	padding: 0 1% 2% 2%;
+}
+
+#instruction {
+	display: table-header-group;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1em;
+}
+
+.version-details {
+	font-size: 0.5em;
+	font-family: Arial, Helvetica, sans-serif;
+	letter-spacing: -.05em;
+	font-style: normal;
+	text-align: center;
+	width: 45%;
+	display: table;
+	margin-right: auto;
+	margin-left: 25%;
+	text-decoration: none;
+	color: #008AB1;
+}
+
+.generated-version-details {
+	float: left;
+	color: #008AB1;
+	font-size: 0.8em;
+	font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
+	letter-spacing: -.05em;
+	font-style: normal;
+}
+
+.header-irt-report {
+	background: rgb(0, 133, 173);
+	position: relative;
+	padding: 5px 10px;
+	height: 25px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 1.5em;
+	text-align: left;
+	color: #f6f6f6;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+}
+
+.border-details {
+	border-width: 2px;
+	border-radius: 5px;
+	border-style: groove;
+	border-color: #008ab1;
+	border-image: initial;
+	width: 100%;
+	display: table;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.irt-success-ui-icon {
+	background-image: url('../images/button-check_green.png');
+	width: 60px;
+	height: 60px;
+	background-repeat: no-repeat;
+	float: left;
+}
+
+.irt-failure-ui-icon {
+	background-image: url('../images/button-cross_red.png');
+	width: 60px;
+	height: 60px;
+	background-repeat: no-repeat;
+	float: left;
+}
+
+.irt-optional-failure-ui-icon {
+	background-image: url('../images/button-cross_yellow.png');
+	width: 60px;
+	height: 60px;
+	background-repeat: no-repeat;
+	float: left;
+}
+
+.report-id-details {
+	font-weight: bold;
+	font-size: 2.5em;
+	font-family: Arial, Helvetica, sans-serif;
+	letter-spacing: .05em;
+	font-style: normal;
+	color: #008AB1;
+	width: 40%;
+	display: table;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.ui-widget-content a {
+	font-weight: bold;
+	font-size: 1.5em;
+	font-family: Arial, Helvetica, sans-serif;
+	letter-spacing: -.05em;
+	font-style: normal;
+	color: #008AB1;
+}
+
+.header-result {
+	display: table;
+	position: relative;
+	padding: 0px 10px;
+	height: 30px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 0.8em;
+	text-align: left;
+	float: right;
+	color: #f6f6f6;
+	top: 10%;
+}
+
+#result-icon-header {
+	width: 30px;
+}
+
+.liketext {
+	display: table-cell;
+	vertical-align: top;
+}
+
+.header-text {
+	display: table;
+	text-align: center;
+	position: relative;
+}
+
+#irtScore {
+	display: table;
+	text-align: center;
+	position: relative;
+}
+
+.divTable-header {
+	display: table;
+	width: 100%;
+}
+
+.divTableCellText, .divTableHead {
+	vertical-align: middle;
+	display: table-cell;
+	float: left;
+	width: 40%;
+}
+
+.divTableCellScore, .divTableHead {
+	vertical-align: middle;
+	display: table-cell;
+	float: left;
+	width: 25%;
+}
+
+.divTableCellScoreIcon {
+	vertical-align: middle;
+	display: table-cell;
+	float: right;
+	width: 35%;
+}
+
+#sectionScore {
+	display: none;
+}
+
+#extScore {
+	display: none;
+}
+
+.red-background {
+	background-color: #ff0000;
+	font-size: 1.5em;
+	color: #f6f6f6;
+	padding: 1% 1% 1% 1%;
+}
+
+.green-background {
+	background-color: #00ff00;
+	font-size: 1.5em;
+	padding: 1% 1% 1% 1%;
+}
+
+.yellow-background {
+	background-color: #FFFF00;
+	font-size: 1.5em;
+	padding: 1% 1% 1% 1%;
+}
+
+.intro-tab-detail {
+	font-size: 1em !important;
+}
+
+.jsgrid {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1em;
+}
+
+.hide-header {
+	display: none;
+}
+
+.loginTab {
+	width: 50%;
+	display: table;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.done-button {
+	background: #358c21;
+	color: #f6f6f6;
+}
+
+.ui-widget-overlay {
+	opacity: .50 !important;
+	/* Make sure to change both of these, as IE only sees the second one */
+	filter: Alpha(Opacity = 50) !important;
+	background-color: rgb(50, 50, 50) !important;
+	/* This will make it darker */
+}
+
+#completeTest {
+	float: right;
+	width: 65%;
+}
+
+.header-ui-icon {
+	height: 30px;
+	width: 30px;
+	cursor: pointer;
+	margin: 0px 5px;
+}
+
+.smarter-logo {
+	width: 183px !important;
+	margin: 0px 30px;
+}
+
+.header-paragraph {
+	-webkit-margin-before: 0px;
+	-webkit-margin-after: 0.1em;
+}
+
+input.uppercase {
+	text-transform: uppercase;
+}
+
+.birt-footer {
+	position: relative;
+	border-top: 1px solid #D3DFE1;
+	border-top-width: 1px;
+	border-top-style: solid;
+	background-color: #fff;
+	padding: 10px 30px 0;
+	font-size: 10px;
+	text-align: right;
+	color: #008AB1;
+}
+
+.x-nav {
+	margin-left: 0;
+	margin-bottom: 1.313em;
+	list-style: none;
+}
+
+.x-nav li {
+	margin: 0 0.5em;
+	display: inline-block;
+	line-height: 1.3;
+}
+
+.x-nav li span {
+	text-transform: none;
+	letter-spacing: 0;
+	font-size: 15px;
+	text-decoration: none;
+	cursor: pointer;
+	width: 100%;
+}
+
+.main {
+	padding: 0px 10% 0px 10%;
+}
+
+.report-main {
+	padding: 0px 5% 0px 5%;
+}
+
+.copyright {
+	letter-spacing: 0pt;
+	font-family: "PT Sans";
+	font-size: 12px;
+	color: #7a7a7a;
+	float: right;
+}
+
+.logo-link {
+	display: block;
+	float: left;
+	line-height: 1;
+	text-decoration: none;
+	cursor: pointer;
+}

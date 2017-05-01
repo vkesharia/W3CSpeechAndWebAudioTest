@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+
+<body>
+
+  <div id="dialogTTS" style="display: none;">
+
+    <div id="ttsTest" style="float: left ;width: 50%">
+      <div id="ttsTextArea">
+        <textarea id="ttsText" cols="40" rows="3">This is a manual test of the Text-to-Speech API.</textarea>
+      </div>
+
+      <div>&nbsp;</div>
+
+      <div>
+        <button id="play"></button>
+        <button id="pause"></button>
+        <button id="resume"></button>
+        <button id="stop"></button>
+
+      </div>
+
+
+      <div class="divTable">
+        <div class="divTableBody">
+
+          <div class="divTableRow" id="ttsOptions" style="display: none;">
+            <div class="divTableHeading">
+              <p
+                
+                style="padding: 4px;">Use the sliders to adjust pitch, rate, volume, system volume, and voice selection</p>
+            </div>
+          </div>
+          <div class="divTableRow">&nbsp;</div>
+
+          <div class="divTableRow">
+            <div class="divTableCell" id="ttsVolumeText"></div>
+            <div class="divTableCellRight" id="ttsVolume"></div>
+          </div>
+
+          <div class="divTableRow">&nbsp;</div>
+          <div class="divTableRow">&nbsp;</div>
+
+          <div class="divTableRow">
+            <div class="divTableCell" id="ttsPitchText"></div>
+            <div class="divTableCellRight" id="ttsPitch"></div>
+          </div>
+
+          <div class="divTableRow">&nbsp;</div>
+          <div class="divTableRow">&nbsp;</div>
+
+          <div class="divTableRow">
+            <div class="divTableCell" id="ttsRateText"></div>
+            <div class="divTableCellRight" id="ttsRate"></div>
+          </div>
+
+          <div class="divTableRow">&nbsp;</div>
+          <div class="divTableRow">&nbsp;</div>
+
+          <div class="divTableRow">
+            <div class="divTableCell">Voice Selection</div>
+            <div class="divTableCellRight">
+              <select id="voices" style="width: 100%;"></select>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+
+    </div>
+
+    <div id="ttsManualReport" style="float: right; width: 50%">
+       <div class="header-irt">Manual test instructions</div>
+    <div id="ttsGrid">
+    
+    
+    </div>
+    
+    </div>
+    
+    <div id="dialog-confirm" style="display: none;">
+    </div>
+
+  </div>
+
+</body>
+</html>
